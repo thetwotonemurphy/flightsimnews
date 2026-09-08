@@ -1,0 +1,40 @@
+FLIGHT SIM NEWS - CLOUDFLARE PAGES DEPLOYMENT
+
+This folder is ready to upload as a static website.
+
+FIRST DEPLOYMENT
+1. Sign in to Cloudflare.
+2. Go to Workers & Pages.
+3. Create application -> Pages -> Drag and drop / Direct Upload.
+4. Project name suggestion: twotonemurphy-flightsimnews
+5. Upload this ZIP (or the unzipped folder).
+6. Deploy.
+7. Cloudflare will give you a temporary address such as:
+   twotonemurphy-flightsimnews.pages.dev
+
+DO NOT CHANGE WIX OR YOUR DOMAIN YET.
+
+TEST
+Open the pages.dev address and check desktop + phone.
+
+THEN CONNECT THE SUBDOMAIN
+Inside the Pages project:
+Custom domains -> Set up a domain
+Enter:
+flightsimnews.twotonemurphy.com
+
+If twotonemurphy.com DNS is still managed by Wix/external DNS, Cloudflare will tell you which CNAME to create.
+The CNAME name will be:
+flightsimnews
+The target will be your <project>.pages.dev hostname.
+
+IMPORTANT
+Add the custom domain inside the Cloudflare Pages project FIRST, then add/change the DNS CNAME at the domain's DNS provider.
+
+SITE ROUTES
+/                       Latest edition
+/archive/                Archive
+/2026/09/02/             Permanent September 2 edition
+
+CURRENT MEDIA NOTE
+The first edition currently references official developer/publisher image URLs. This gets the pilot live without fake imagery. For the permanent workflow we should store approved publication images with the site itself so an external developer changing an image URL cannot break an old edition.
